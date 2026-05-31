@@ -1,0 +1,90 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="huggingface_hub" />
+          <option value="tokenizers" />
+          <option value="transformers" />
+          <option value="torch" />
+          <option value="torchaudio" />
+          <option value="starlette" />
+          <option value="absl-py" />
+          <option value="addict" />
+          <option value="attrs" />
+          <option value="basicsr" />
+          <option value="bottle" />
+          <option value="certifi" />
+          <option value="cffi" />
+          <option value="charset-normalizer" />
+          <option value="clr_loader" />
+          <option value="colorama" />
+          <option value="coloredlogs" />
+          <option value="contourpy" />
+          <option value="cycler" />
+          <option value="facexlib" />
+          <option value="filelock" />
+          <option value="filterpy" />
+          <option value="flatbuffers" />
+          <option value="fonttools" />
+          <option value="fsspec" />
+          <option value="future" />
+          <option value="gfpgan" />
+          <option value="grpcio" />
+          <option value="humanfriendly" />
+          <option value="idna" />
+          <option value="ImageIO" />
+          <option value="Jinja2" />
+          <option value="jsonschema" />
+          <option value="jsonschema-specifications" />
+          <option value="kiwisolver" />
+          <option value="lazy-loader" />
+          <option value="llvmlite" />
+          <option value="lmdb" />
+          <option value="Markdown" />
+          <option value="MarkupSafe" />
+          <option value="matplotlib" />
+          <option value="mpmath" />
+          <option value="networkx" />
+          <option value="numba" />
+          <option value="numpy" />
+          <option value="onnxruntime" />
+          <option value="opencv-python" />
+          <option value="opencv-python-headless" />
+          <option value="packaging" />
+          <option value="pillow" />
+          <option value="platformdirs" />
+          <option value="pooch" />
+          <option value="protobuf" />
+          <option value="proxy_tools" />
+          <option value="pycparser" />
+          <option value="PyMatting" />
+          <option value="pyparsing" />
+          <option value="pyreadline3" />
+          <option value="python-dateutil" />
+          <option value="pythonnet" />
+          <option value="pywebview" />
+          <option value="PyYAML" />
+          <option value="realesrgan" />
+          <option value="referencing" />
+          <option value="rembg" />
+          <option value="requests" />
+          <option value="rpds-py" />
+          <option value="scikit-image" />
+          <option value="scipy" />
+          <option value="six" />
+          <option value="sympy" />
+          <option value="tb-nightly" />
+          <option value="tensorboard-data-server" />
+          <option value="tifffile" />
+          <option value="tomli" />
+          <option value="torchvision" />
+          <option value="lxml" />
+          <option value="python-docx" />
+          <option value="typing_extensions" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
