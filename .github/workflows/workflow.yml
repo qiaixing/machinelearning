@@ -1,22 +1,39 @@
-name: 测试Docker拉取并导出产物
+name: 双镜像拉取导出打包测试
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
+  workflow_dispatch: # 支持手动触发
 
 jobs:
-  build:
+  # 并行任务1：拉取华为SWR镜像并导出
+  pull-swr:
     runs-on: ubuntu-latest
     steps:
-      - name: 拉取镜像
-        run: docker pull swr.cn-east-2.myhuaweicloud.com/qiaixing/coderunner:v1
+      - name: 拉取华为SWR镜像 v3
+        run: docker pull swr.cn-east-2.myhuaweicloud.com/qiaixing/coderunner:v3
 
-      - name: 导出镜像为文件
-        run: docker save -o coderunner.tar swr.cn-east-2.myhuaweicloud.com/qiaixing/coderunner:v1
+      - name: 导出SWR镜像为tar
+        run: docker save -o coderunner-swr-v3.tar swr.cn-east-2.myhuaweicloud.com/qiaixing/coderunner:v3
 
-      - name: 上传为可下载产物
+      - name: 上传SWR镜像产物
         uses: actions/upload-artifact@v4
         with:
-          name: coderunner-image
-          path: coderunner.tar
+          name: coderunner-swr-v3-image
+          path: coderunner-swr-v3.tar
+
+  # 并行任务2：拉取南大加速GHCR镜像并导出
+  pull-ghcr-mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取南大加速GHCR镜像 v3
+        run: docker pull ghcr.nju.edu.cn/qiaixing/coderunner:v3
+
+      - name: 导出GHCR镜像为tar
+        run: docker save -o coderunner-ghcr-mirror-v3.tar ghcr.nju.edu.cn/qiaixing/coderunner:v3
+
+      - name: 上传GHCR镜像产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: coderunner-ghcr-mirror-v3-image
+          path: coderunner-ghcr-mirror-v3.tar
